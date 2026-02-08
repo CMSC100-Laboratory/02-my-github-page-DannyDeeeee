@@ -171,12 +171,10 @@ body{
 
 #rightSide{
     padding: 50px;
-    display: grid;
     z-index: 1;
     width:500px;
     background-color: rgb(255, 142, 97);
     grid-template-columns: 1;
-    grid-template-rows: 1fr 5fr 5fr;
     justify-content: center;
     font-size: 40pt;
     font-weight: 900;
@@ -203,4 +201,7 @@ body{
 .ProjLogos{
     margin:5px;
     border-radius: 13px;
+}
+#animations{
+    margin-top: 20px;
 }
