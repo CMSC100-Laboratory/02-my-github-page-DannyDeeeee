@@ -1,0 +1,304 @@
+*{
+    font-family: "Ubuntu Mono";
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16pt;
+}
+#main{
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+body{
+    background-image: url("LowerArea.png");
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+#leftSide{
+    padding: 20px;
+    flex: 1;
+    background-image: url("SVGs/SteppedGradient.svg");
+    background-repeat: repeat-x;
+    background-position:top;
+    width:0px;
+    background-size:auto;
+}
+#rightSide{
+    z-index: 1;
+    width: 500px;
+    margin-right:0%;
+}
+#rightSideElements{
+    background-color: rgb(230, 73, 73);
+    z-index: 1;
+    font-size: 40pt;
+    font-weight: 900;
+    background-image: url(SVGs/RepeatingTile.png);
+    background-repeat: repeat;
+    background-size:100px;
+    background-attachment: scroll;
+    background-position: top left;
+    padding: 50px;
+    width: 500px;
+    justify-content: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1;
+}
+
+#rightSideElements > *{
+    font-size: 16pt;
+    font-weight:500;
+
+}
+
+
+#navBar{
+    background-color: #b67b57;
+    width: 100%;
+    height: 60px;
+    position:fixed;
+    align-items: center;
+    padding-left: 10px;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.NavContent{
+    margin-right: 20px;
+    justify-content: end;
+    display:flex;
+    width:500px;
+    height:40px;
+
+}
+.nav-box{
+    background-color: #b67b57;
+    align-content: center;
+    text-align: center;
+    border-style: solid;
+    border-width:2px;
+    border-color: #8b5f44;
+    border-radius: 10px;
+    width:100px;
+    height: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-decoration: none;
+    color:black;
+}
+
+.nav-box:hover{
+    background-color: rgb(255, 255, 255);
+}
+
+.drawer-box{
+
+}
+
+#drawerLogo{
+    height:40px;
+    margin-left:20px;
+    margin-right:20px;
+
+}
+
+#nav-logo{
+    height: 50px;
+}
+#pfpAndSkills{
+    display: flex;
+    height: fit-content;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#pfp{
+    border-radius: 20px;
+    max-height: 300px;
+    margin-bottom: 20px;
+}
+
+#skillsNText{
+    display:grid;
+    height: 300px;
+    width: 850px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 7fr;
+    z-index: 0;
+}
+#skillText{
+    font-size: 30pt;
+    font-weight: 700;
+    width:100%;
+    text-align:center;
+    align-self: end;
+}
+
+.push-center{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#skills{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+    
+}
+.glass-container{
+    border-style: solid;
+    border-radius: 20px;
+    border-top: 1px;
+    border-left: 1px;
+    border-color: rgba(255, 255, 255, 0.406);
+    background-color: rgba(255, 255, 255, 0.524);
+    backdrop-filter: blur(8px);
+}
+
+#title{
+    font-size:40pt;
+    font-weight: 1000;
+    height:70px;
+}
+
+.LogoBox{
+    margin-top: 20px;
+    display: grid;
+    justify-items: center;
+    width: 128px;
+    height: 128px;
+    grid-template-columns: 1;
+}
+.skill-logos{
+    height:128px;
+}
+
+.Skill-Meter{
+    margin-top:30px;
+    background-color: rgb(251, 114, 114);
+    height:10px;
+    width: 100px;
+    border-radius: 5px;
+}
+#blenderLogo{
+    position: relative;
+}
+.Skill-Percent{
+    height:12px;
+    border-radius: 5px;
+    margin-top: -1px;
+    z-index: 1;
+    background-color: rgb(139, 255, 133);
+}
+
+#clangPercent{
+    width: 60%;
+}
+
+#blenderPercent{
+    width: 80%;
+}
+
+#javaPercent{
+    width: 40%;
+}
+
+#csharpPercent{
+    width: 10%;
+}
+
+.percentScore{
+    font-family: 'Courier Prime',Courier, monospace;
+    font-size: large;
+}
+
+.Opening{
+    margin-top: 60px;
+    padding: 10px;
+}
+.Hello{
+    font-size: 40pt;
+    text-align: center;
+}
+.introduce{
+    margin-top:40px;
+    margin-left: 0px;
+    font-size: 16pt;
+    text-align: center;
+}
+
+.autobio{
+    padding: 20px;
+    margin-top:40px;
+    width: 100%;
+    height: minmax(500px, 100%);
+    font-size: 16pt;
+    text-align: justify;
+}
+
+
+.projects-panel{
+    margin-right:auto;
+    margin-left: auto;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: rgb(250, 129, 129);
+    max-width: 400px;
+    max-height: 470px;
+}
+.Footer{
+    padding: 15px;
+    height:250px;
+    width:100%;
+    margin-top: 80px;
+    display:flex;
+    border-style: solid;
+    border-width: 0;
+    border-top-width: 2px;
+    border-color: black;
+    flex-wrap: nowrap;
+}
+#FooterLogo{
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+.ProjLogos{
+    max-width: fit-content;
+    border-color: rgba(255, 255, 255, 0.212);
+    margin:20px;
+    border-radius: 13px;
+}
+#animations{
+    margin-top: 20px;
+}
+
+.footnote-message{
+    width: 1000px;
+    height:auto;
+    margin-left: auto;
+    text-align: end;
+    line-height: 30pt;
+    font-size: 18pt;
+}
+
+.pjFollowables{
+    bottom: 0px;
+    position: relative;
+    transition-property: bottom;
+    transition-duration: 100ms;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+.pjFollowables:hover{
+    bottom:5px;
+}
+.pjFollowables:after{
+    
+}
