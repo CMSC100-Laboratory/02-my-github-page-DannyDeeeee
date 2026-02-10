@@ -8,7 +8,6 @@
 #main{
     padding-top: 50px;
     display: flex;
-    flex-wrap: nowrap;
     justify-content: space-between;
     overflow: hidden;
 }
@@ -19,13 +18,41 @@ body{
 
 }
 #leftSide{
-    width: 100%;
-    flex:1;
     padding: 20px;
+    flex: 1;
     background-image: url("SVGs/SteppedGradient.svg");
     background-repeat: repeat-x;
     background-position:top;
+    width:0px;
     background-size:auto;
+}
+#rightSide{
+    z-index: 1;
+    width: 500px;
+    margin-right:0%;
+}
+#rightSideElements{
+    background-color: rgb(230, 73, 73);
+    z-index: 1;
+    font-size: 40pt;
+    font-weight: 900;
+    background-image: url(SVGs/RepeatingTile.png);
+    background-repeat: repeat;
+    background-size:100px;
+    background-attachment: scroll;
+    background-position: top left;
+    padding: 50px;
+    width: 500px;
+    justify-content: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1;
+}
+
+#rightSideElements > *{
+    font-size: 16pt;
+    font-weight:500;
+
 }
 
 
@@ -40,12 +67,14 @@ body{
     display: flex;
     justify-content: space-between;
 }
+
 .NavContent{
     margin-right: 20px;
     justify-content: end;
     display:flex;
     width:500px;
     height:40px;
+
 }
 .nav-box{
     background-color: #b67b57;
@@ -59,9 +88,18 @@ body{
     height: 100%;
     margin-left: 20px;
     margin-right: 20px;
+    text-decoration: none;
+    color:black;
 }
-.nav-text{
+
+.nav-box:hover{
+    background-color: rgb(255, 255, 255);
 }
+
+.drawer-box{
+
+}
+
 #drawerLogo{
     height:40px;
     margin-left:20px;
@@ -90,6 +128,7 @@ body{
     width: 850px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 7fr;
+    z-index: 0;
 }
 #skillText{
     font-size: 30pt;
@@ -202,36 +241,7 @@ body{
     text-align: justify;
 }
 
-#rightSide{
-    width: 500px;
-    margin-right:0%;
-        margin-left: 0%;
-    background-color: rgb(230, 73, 73);
-    z-index: 1;
-    font-size: 40pt;
-    font-weight: 900;
-    background-image: url(SVGs/RepeatingTile.png);
-    background-repeat: repeat;
-    background-size:100px;
-    background-attachment: scroll;
-    background-position: top left;
-    padding: 50px;
-    width: 500px;
-    justify-content: center;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1;
-}
 
-#rightSideElements{
-
-}
-
-#rightSideElements > *{
-    font-size: 16pt;
-    font-weight:500;
-
-}
 .projects-panel{
     margin-right:auto;
     margin-left: auto;
@@ -246,7 +256,7 @@ body{
     padding: 15px;
     height:250px;
     width:100%;
-    margin-top: 160px;
+    margin-top: 80px;
     display:flex;
     border-style: solid;
     border-width: 0;
@@ -276,4 +286,19 @@ body{
     text-align: end;
     line-height: 30pt;
     font-size: 18pt;
+}
+
+.pjFollowables{
+    bottom: 0px;
+    position: relative;
+    transition-property: bottom;
+    transition-duration: 100ms;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+.pjFollowables:hover{
+    bottom:5px;
+}
+.pjFollowables:after{
+    
 }
