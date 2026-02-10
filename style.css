@@ -31,24 +31,28 @@ body{
 
 
 #navBar{
-    display:flex;
-    background-color: #87512f;
+    background-color: #b67b57;
     width: 100%;
-    height: 50px;
+    height: 60px;
     position:fixed;
     align-items: center;
     padding-left: 10px;
     z-index: 2;
+    display: flex;
+}
+#nav-logo{
+    height: 50px;
 }
 #pfpAndSkills{
     display: flex;
     height: fit-content;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 #pfp{
     border-radius: 20px;
-    flex: 0;
     max-height: 300px;
+    margin-bottom: 20px;
 }
 
 #skillsNText{
@@ -66,7 +70,7 @@ body{
     align-self: end;
 }
 
-.push-right{
+.push-center{
     margin-left:auto;
     margin-right:auto;
 }
@@ -161,7 +165,7 @@ body{
 }
 
 .autobio{
-    padding: 10px;
+    padding: 20px;
     margin-top:40px;
     width: 100%;
     height: minmax(500px, 100%);
@@ -172,36 +176,64 @@ body{
 #rightSide{
     padding: 50px;
     z-index: 1;
-    width:500px;
-    background-color: rgb(255, 142, 97);
+    width: 25%;
+    background-color: rgb(156, 44, 44);
     grid-template-columns: 1;
     justify-content: center;
     font-size: 40pt;
     font-weight: 900;
     text-align: center;
+    background-image: url(SVGs/RepeatingTile.png);
+    background-repeat: repeat;
+    background-size:100px;
+    background-position: 35px;
 }
 #rightSide > *{
     font-size: 16pt;
     font-weight:500;
+
 }
 .projects-panel{
+    margin-right:auto;
+    margin-left: auto;
     margin-bottom: 15px;
     border-radius: 15px;
     padding: 20px;
-    background-color: rgb(195, 114, 81);
+    background-color: rgb(250, 129, 129);
     width: 400px;
-    height: 450px;
+    height: 470px;
 }
 .Footer{
     padding: 15px;
     height:250px;
+    width:100%;
     margin-top: 160px;
-    background-color: green;
+    display:flex;
+    border-style: solid;
+    border-width: 0;
+    border-top-width: 2px;
+    border-color: black;
+    flex-wrap: nowrap;
 }
+#FooterLogo{
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
 .ProjLogos{
-    margin:5px;
+    border-color: rgba(255, 255, 255, 0.212);
+    margin:20px;
     border-radius: 13px;
 }
 #animations{
     margin-top: 20px;
+}
+
+.footnote-message{
+    width: 1000px;
+    height:auto;
+    margin-left: auto;
+    text-align: end;
+    line-height: 30pt;
+    font-size: 18pt;
 }
