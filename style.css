@@ -7,9 +7,10 @@
 }
 #main{
     padding-top: 50px;
-    width: 100%;
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
+    overflow: hidden;
 }
 body{
     background-image: url("LowerArea.png");
@@ -18,16 +19,14 @@ body{
 
 }
 #leftSide{
+    width: 100%;
+    flex:1;
     padding: 20px;
-    flex: 1;
     background-image: url("SVGs/SteppedGradient.svg");
     background-repeat: repeat-x;
     background-position:top;
     background-size:auto;
-    width:400px;
-    height: fx;
 }
-
 
 
 #navBar{
@@ -39,7 +38,37 @@ body{
     padding-left: 10px;
     z-index: 2;
     display: flex;
+    justify-content: space-between;
 }
+.NavContent{
+    margin-right: 20px;
+    justify-content: end;
+    display:flex;
+    width:500px;
+    height:40px;
+}
+.nav-box{
+    background-color: #b67b57;
+    align-content: center;
+    text-align: center;
+    border-style: solid;
+    border-width:2px;
+    border-color: #8b5f44;
+    border-radius: 10px;
+    width:100px;
+    height: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.nav-text{
+}
+#drawerLogo{
+    height:40px;
+    margin-left:20px;
+    margin-right:20px;
+
+}
+
 #nav-logo{
     height: 50px;
 }
@@ -58,7 +87,7 @@ body{
 #skillsNText{
     display:grid;
     height: 300px;
-    width: 900px;
+    width: 850px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 7fr;
 }
@@ -174,21 +203,31 @@ body{
 }
 
 #rightSide{
-    padding: 50px;
+    width: 500px;
+    margin-right:0%;
+        margin-left: 0%;
+    background-color: rgb(230, 73, 73);
     z-index: 1;
-    width: 25%;
-    background-color: rgb(156, 44, 44);
-    grid-template-columns: 1;
-    justify-content: center;
     font-size: 40pt;
     font-weight: 900;
-    text-align: center;
     background-image: url(SVGs/RepeatingTile.png);
     background-repeat: repeat;
     background-size:100px;
-    background-position: 35px;
+    background-attachment: scroll;
+    background-position: top left;
+    padding: 50px;
+    width: 500px;
+    justify-content: center;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1;
 }
-#rightSide > *{
+
+#rightSideElements{
+
+}
+
+#rightSideElements > *{
     font-size: 16pt;
     font-weight:500;
 
@@ -200,8 +239,8 @@ body{
     border-radius: 15px;
     padding: 20px;
     background-color: rgb(250, 129, 129);
-    width: 400px;
-    height: 470px;
+    max-width: 400px;
+    max-height: 470px;
 }
 .Footer{
     padding: 15px;
@@ -221,6 +260,7 @@ body{
 }
 
 .ProjLogos{
+    max-width: fit-content;
     border-color: rgba(255, 255, 255, 0.212);
     margin:20px;
     border-radius: 13px;
